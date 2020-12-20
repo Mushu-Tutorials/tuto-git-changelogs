@@ -1,3 +1,8 @@
+# Version 5 (2020-12-20)
+
+## Features
+* Add some text in dummy file. ([aaddd2](https://github.com/jackyef/changelog-generator/commit/aaddd2ac36f5574c2118c1d1be6241943f020f48))
+
 # Version 4 (2020-12-20)
 
 # Version 3 (2020-12-20)
