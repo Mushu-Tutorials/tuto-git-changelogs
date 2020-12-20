@@ -1,3 +1,11 @@
+# Version 3 (2020-12-20)
+
+## Features
+* Implemented versioning for the changelog generator ([32b75e](https://github.com/jackyef/changelog-generator/commit/32b75e2b4b1e03be86f368a2d00ae4b3636aa9ca))
+
+## Chores
+* Added dummy.txt file ([c69388](https://github.com/jackyef/changelog-generator/commit/c69388dd2d504f0c1aeb1ac95db7b2b5b6167720))
+
 # Version 2 (2020-12-20)
 
 ## Features
