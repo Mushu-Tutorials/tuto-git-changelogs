@@ -1,13 +1,13 @@
 # Version 1.0.8 (2020-12-21)
 
 ## Features
-* Add hotfix to process. ([701d03](https://github.com/jackyef/changelog-generator/commit/701d036a629000eeea6464e5f188cd6279c411ba))
+* Add hotfix to process. ([701d03](https://github.com/Mushu-Tutorials/tuto-git-changelogs/commit/701d036a629000eeea6464e5f188cd6279c411ba))
 
 ## Chores
-* Add gitignore file. ([baf2e3](https://github.com/jackyef/changelog-generator/commit/baf2e3402c297657c765cd67f3cd0fcf0a1ecdcd))
+* Add gitignore file. ([baf2e3](https://github.com/Mushu-Tutorials/tuto-git-changelogs/commit/baf2e3402c297657c765cd67f3cd0fcf0a1ecdcd))
 
 ## Hotfix
-* Modify the wrong commit URL in the Changelog. ([b16114](https://github.com/jackyef/changelog-generator/commit/b161147e91283de563920b285660e2ee4af0a05b))
+* Modify the wrong commit URL in the Changelog. ([b16114](https://github.com/Mushu-Tutorials/tuto-git-changelogs/commit/b161147e91283de563920b285660e2ee4af0a05b))
 
 # Version 1.0.7 (2020-12-21)
 
