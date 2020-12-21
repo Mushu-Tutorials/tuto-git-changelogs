@@ -4,7 +4,7 @@ Tutorial for automatic generated changelogs from [this medium article](https://m
 
 ## TODO
 
-- [ ] Externalize the URL of the project in an environment file ([tuto](https://dev.to/deammer/loading-environment-variables-in-js-apps-1p7p)) using `npm i dotenv`.
+- [ ] Externalize the URL of the project in an environment file ([tuto 1](https://dev.to/deammer/loading-environment-variables-in-js-apps-1p7p), [tuto 2](https://medium.com/the-node-js-collection/making-your-node-js-work-everywhere-with-environment-variables-2da8cdf6e786)) using `npm i dotenv`.
 
 ## Process
 
