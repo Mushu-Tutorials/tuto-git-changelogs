@@ -1,3 +1,8 @@
+# Version 1.0.10 (2020-12-21)
+
+## Features
+* Add Push command to script JS ([499b8e](https://github.com/Mushu-Tutorials/tuto-git-changelogs/499b8ef3defae9ac5322b055344439dcc3d86838))
+
 # Version 1.0.9 (2020-12-21)
 
 ## Hotfix
