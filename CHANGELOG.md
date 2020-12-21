@@ -1,7 +1,7 @@
 # Version 1.0.9 (2020-12-21)
 
 ## Hotfix
-* After pop, still have wrongs commit URLs. ([28d6e0](https://github.com/Mushu-Tutorials/tuto-git-changelogs/28d6e0ca12b9af507d85e034a3e9262ef7488812))
+* After pop, still have wrongs commit URLs. ([28d6e0](https://github.com/Mushu-Tutorials/tuto-git-changelogs/commit/28d6e0ca12b9af507d85e034a3e9262ef7488812))
 
 # Version 1.0.8 (2020-12-21)
 
