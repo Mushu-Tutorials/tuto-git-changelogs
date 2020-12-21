@@ -46,6 +46,7 @@ let newChangelog = `# Version ${newVersion} (${
 
 const features = [];
 const chores = [];
+const gitProject = 'https://github.com/jackyef/changelog-generator/commit/';
 
 commitsArray.forEach((commit) => {
   if (commit.message.startsWith('feature: ')) {
@@ -53,7 +54,7 @@ commitsArray.forEach((commit) => {
       `* ${commit.message.replace('feature: ', '')} ([${commit.sha.substring(
         0,
         6
-      )}](https://github.com/jackyef/changelog-generator/commit/${
+      )}](${gitProject}${
         commit.sha
       }))\n`
     );
@@ -63,7 +64,7 @@ commitsArray.forEach((commit) => {
       `* ${commit.message.replace('chore: ', '')} ([${commit.sha.substring(
         0,
         6
-      )}](https://github.com/jackyef/changelog-generator/commit/${
+      )}](${gitProject}${
         commit.sha
       }))\n`
     );

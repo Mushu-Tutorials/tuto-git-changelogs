@@ -1,3 +1,8 @@
+# Version 1.0.7 (2020-12-21)
+
+## Features
+* Update the version naming in the changelog ([22ab82](https://github.com/jackyef/changelog-generator/commit/22ab82f4a3d510a07feea3586b035daae21e9645))
+
 # Version 6 (2020-12-21)
 
 ## Features
