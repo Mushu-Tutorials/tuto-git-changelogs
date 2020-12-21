@@ -1,3 +1,5 @@
+# Version 1.0.7 (2020-12-21)
+
 # Version 6 (2020-12-21)
 
 ## Features

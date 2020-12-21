@@ -23,7 +23,19 @@ const currentChangelog = fs.readFileSync('./CHANGELOG.md', 'utf-8');
 
 // Update the package.json file version with Dot (last element)
 const currentVersion = require('./package.json').version;
-const newVersion = Number(currentVersion.split('.').slice(-1)[0]) + 1;
+// Convert each versions into an array (.split) and convert string to int with a function
+const arrayOfVersions = currentVersion.split('.').map((x) => parseInt(x, 10));
+
+const arrayOfNewVersions = arrayOfVersions;
+// Change Feature version in the new array
+const newFeatureVersion =
+  Number(arrayOfNewVersions[arrayOfNewVersions.length - 1]) + 1;
+arrayOfNewVersions[arrayOfNewVersions.length - 1] = newFeatureVersion;
+
+const newVersion = arrayOfNewVersions.join('.');
+// console.log(newVersion);
+// throw new Error('my error message');
+
 // Update the package.json file version with Int Number
 // const currentVersion = Number(require('./package.json').version);
 // const newVersion = currentVersion + 1;
