@@ -21,9 +21,21 @@ const commitsArray = output
 // Write in the CHANGELOG.md file
 const currentChangelog = fs.readFileSync('./CHANGELOG.md', 'utf-8');
 
+/**
+ * Modify package.json version
+ */
 // Update the package.json file version with Dot (last element)
 const currentVersion = require('./package.json').version;
-const newVersion = Number(currentVersion.split('.').slice(-1)[0]) + 1;
+// Convert each versions into an array (.split) and convert string to int with a function
+const arrayOfVersions = currentVersion.split('.').map((x) => parseInt(x, 10));
+
+// Change Feature version in the new array
+const arrayOfNewVersions = arrayOfVersions;
+const newFeatureVersion =
+  Number(arrayOfNewVersions[arrayOfNewVersions.length - 1]) + 1;
+arrayOfNewVersions[arrayOfNewVersions.length - 1] = newFeatureVersion;
+const newVersion = arrayOfNewVersions.join('.');
+
 // Update the package.json file version with Int Number
 // const currentVersion = Number(require('./package.json').version);
 // const newVersion = currentVersion + 1;
@@ -89,5 +101,5 @@ child.execSync(`git commit -m "chore: Bump to version ${newVersion}"`);
 
 // tag the commit
 child.execSync(
-  `git tag -a -m "Tag for version ${newVersion}" version${newVersion}`
+  `git tag -a -m "Tag for version ${newVersion}" v${newVersion}`
 );
