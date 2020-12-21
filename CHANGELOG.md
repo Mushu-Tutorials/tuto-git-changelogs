@@ -1,3 +1,8 @@
+# Version 6 (2020-12-21)
+
+## Features
+* Change the version format in the project. Use dot like 1.0.6. ([f06d9a](https://github.com/jackyef/changelog-generator/commit/f06d9a66c0a70ab802223d2be2bd883e17fc4146))
+
 # Version 5 (2020-12-20)
 
 ## Features
