@@ -1,7 +1,8 @@
 const child = require('child_process');
 const fs = require('fs');
 
-const gitProject = 'https://github.com/jackyef/changelog-generator/commit/';
+/** Update the URL of the project */
+const urlProject = 'https://github.com/Mushu-Tutorials/tuto-git-changelogs/';
 
 const latestTag = child
   .execSync('git describe --long')
