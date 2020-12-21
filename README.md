@@ -14,4 +14,4 @@ Naming convention :
 - `chore:` : to commit a new modification that not modify production ([source](https://stackoverflow.com/a/26944812/7998119 "Chore definition"))
 - `hotfix:` : to commit a new hotfix
 
-To update changelog automatically via javascript script : `node index.js`
+To update changelog automatically via javascript script (and upgrade the version) : `node index.js`

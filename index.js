@@ -33,9 +33,9 @@ const arrayOfVersions = currentVersion.split('.').map((x) => parseInt(x, 10));
 
 // Change Feature version in the new array
 const arrayOfNewVersions = arrayOfVersions;
-const newFeatureVersion =
+const newIncrementVersion =
   Number(arrayOfNewVersions[arrayOfNewVersions.length - 1]) + 1;
-arrayOfNewVersions[arrayOfNewVersions.length - 1] = newFeatureVersion;
+arrayOfNewVersions[arrayOfNewVersions.length - 1] = newIncrementVersion;
 const newVersion = arrayOfNewVersions.join('.');
 
 // Update the package.json file version with Int Number
