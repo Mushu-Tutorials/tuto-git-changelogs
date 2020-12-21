@@ -2,7 +2,7 @@ const child = require('child_process');
 const fs = require('fs');
 
 /** Update the URL of the project */
-const urlProject = 'https://github.com/Mushu-Tutorials/tuto-git-changelogs/';
+const gitProject = 'https://github.com/Mushu-Tutorials/tuto-git-changelogs/';
 
 const latestTag = child
   .execSync('git describe --long')
@@ -48,8 +48,8 @@ let newChangelog = `# Version ${newVersion} (${
 })\n\n`;
 
 const features = [];
-const hotfix = [];
 const chores = [];
+const hotfix = [];
 
 commitsArray.forEach((commit) => {
   if (commit.message.startsWith('feature: ')) {
