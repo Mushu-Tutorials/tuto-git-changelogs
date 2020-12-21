@@ -45,6 +45,7 @@ let newChangelog = `# Version ${newVersion} (${
 })\n\n`;
 
 const features = [];
+const hotfix = [];
 const chores = [];
 const gitProject = 'https://github.com/jackyef/changelog-generator/commit/';
 
@@ -54,9 +55,15 @@ commitsArray.forEach((commit) => {
       `* ${commit.message.replace('feature: ', '')} ([${commit.sha.substring(
         0,
         6
-      )}](${gitProject}${
-        commit.sha
-      }))\n`
+      )}](${gitProject}${commit.sha}))\n`
+    );
+  }
+  if (commit.message.startsWith('hotfix: ')) {
+    hotfix.push(
+      `* ${commit.message.replace('hotfix: ', '')} ([${commit.sha.substring(
+        0,
+        6
+      )}](${gitProject}${commit.sha}))\n`
     );
   }
   if (commit.message.startsWith('chore: ')) {
@@ -64,9 +71,7 @@ commitsArray.forEach((commit) => {
       `* ${commit.message.replace('chore: ', '')} ([${commit.sha.substring(
         0,
         6
-      )}](${gitProject}${
-        commit.sha
-      }))\n`
+      )}](${gitProject}${commit.sha}))\n`
     );
   }
 });
@@ -75,6 +80,14 @@ if (features.length) {
   newChangelog += `## Features\n`;
   features.forEach((feature) => {
     newChangelog += feature;
+  });
+  newChangelog += '\n';
+}
+
+if (hotfix.length) {
+  newChangelog += `## Hotfix\n`;
+  hotfix.forEach((fix) => {
+    newChangelog += fix;
   });
   newChangelog += '\n';
 }
@@ -101,6 +114,4 @@ child.execSync('git add .');
 child.execSync(`git commit -m "chore: Bump to version ${newVersion}"`);
 
 // tag the commit
-child.execSync(
-  `git tag -a -m "Tag for version ${newVersion}" v${newVersion}`
-);
+child.execSync(`git tag -a -m "Tag for version ${newVersion}" v${newVersion}`);
