@@ -1,6 +1,8 @@
 const child = require('child_process');
 const fs = require('fs');
 
+const gitProject = 'https://github.com/jackyef/changelog-generator/commit/';
+
 const latestTag = child
   .execSync('git describe --long')
   .toString('utf-8')
@@ -47,7 +49,6 @@ let newChangelog = `# Version ${newVersion} (${
 const features = [];
 const hotfix = [];
 const chores = [];
-const gitProject = 'https://github.com/jackyef/changelog-generator/commit/';
 
 commitsArray.forEach((commit) => {
   if (commit.message.startsWith('feature: ')) {
@@ -58,17 +59,17 @@ commitsArray.forEach((commit) => {
       )}](${gitProject}${commit.sha}))\n`
     );
   }
-  if (commit.message.startsWith('hotfix: ')) {
-    hotfix.push(
-      `* ${commit.message.replace('hotfix: ', '')} ([${commit.sha.substring(
+  if (commit.message.startsWith('chore: ')) {
+    chores.push(
+      `* ${commit.message.replace('chore: ', '')} ([${commit.sha.substring(
         0,
         6
       )}](${gitProject}${commit.sha}))\n`
     );
   }
-  if (commit.message.startsWith('chore: ')) {
-    chores.push(
-      `* ${commit.message.replace('chore: ', '')} ([${commit.sha.substring(
+  if (commit.message.startsWith('hotfix: ')) {
+    hotfix.push(
+      `* ${commit.message.replace('hotfix: ', '')} ([${commit.sha.substring(
         0,
         6
       )}](${gitProject}${commit.sha}))\n`
@@ -84,18 +85,18 @@ if (features.length) {
   newChangelog += '\n';
 }
 
-if (hotfix.length) {
-  newChangelog += `## Hotfix\n`;
-  hotfix.forEach((fix) => {
-    newChangelog += fix;
-  });
-  newChangelog += '\n';
-}
-
 if (chores.length) {
   newChangelog += `## Chores\n`;
   chores.forEach((chore) => {
     newChangelog += chore;
+  });
+  newChangelog += '\n';
+}
+
+if (hotfix.length) {
+  newChangelog += `## Hotfix\n`;
+  hotfix.forEach((fix) => {
+    newChangelog += fix;
   });
   newChangelog += '\n';
 }
