@@ -1,6 +1,6 @@
 # tuto-git-changelogs
 
-*Submodule of [tuto-git](https://github.com/Mushu-Tutorials/tuto-git "tuto-git")
+*Submodule of [tuto-git](https://github.com/Mushu-Tutorials/tuto-git "tuto-git")*
 
 Tutorial for automatic generated changelogs from [this medium article](https://medium.com/better-programming/create-your-own-changelog-generator-with-git-aefda291ea93)
 
